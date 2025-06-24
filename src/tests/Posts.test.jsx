@@ -70,7 +70,7 @@ test("App, PostList'e clapAction props'unu aktarıyor mu?", () => {
   expect(typeof mockClap.mock.calls[0][0]).toBe("function");
 });
 
-test("receives and uses props correctly from PostList", () => {
+test("Post componenti doğru propsları alıp kullanıyor mu?", () => {
   render(<Post item={mockItem} onClap={mockOnClap} />);
 
   // Props'tan gelen veriler doğru kullanılıyor mu?
@@ -80,7 +80,7 @@ test("receives and uses props correctly from PostList", () => {
   expect(screen.getByText(mockItem.claps.toString())).toBeInTheDocument();
 });
 
-test("displays all post data correctly", () => {
+test("Post componentı tüm postları ve clap butonlarını görüntülüyor mu?", () => {
   render(<Post item={mockItem} onClap={mockOnClap} />);
 
   // Tüm post verileri gösteriliyor mu?
@@ -92,7 +92,7 @@ test("displays all post data correctly", () => {
   expect(screen.getByRole("button")).toBeInTheDocument();
 });
 
-test("calls onClap with correct post id when clap button is clicked", () => {
+test("Clap butonuna tıklandığında doğru sayıyı arttırıyor mu?", () => {
   render(<Post item={mockItem} onClap={mockOnClap} />);
 
   const clapButton = screen.getByRole("button");
@@ -103,7 +103,7 @@ test("calls onClap with correct post id when clap button is clicked", () => {
   expect(mockOnClap).toHaveBeenCalledTimes(1);
 });
 
-test("renders comments using map with correct keys and props", () => {
+test("Doğru yorumları görüntülüyor mu?", () => {
   render(<Post item={mockItem} onClap={mockOnClap} />);
 
   // Tüm yorumlar render edilmiş mi?
