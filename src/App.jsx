@@ -26,13 +26,10 @@ function App() {
         <h1>photogram.</h1>
       </div>
       {/*
-        State içinde saklanan veriyi, PostList ve map metodu kullanarak listele.
-        - key vermeyi unutma, değer olarak id'yi kullanabilirsin.
-        - map metodu ve key kullanımını PostList dosyasından öğrenebilirsin.
-      */}
-
-      {/*
-        PostList componentı kullanıma hazır. Kodunu incele ve gerekli props'ları gönder.
+        State'teki veriyi göstermek için PostList componentını kullan.
+        PostList, map ve key işini KENDİ İÇİNDE yapıyor (orada değişiklik yok) —
+        sen sadece gerekli props'ları gönder. Hangi props'ları beklediğini
+        görmek için PostList dosyasını incele.
       */}
     </div>
   );
